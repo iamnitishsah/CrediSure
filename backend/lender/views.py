@@ -7,7 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 
 class PredictView(generics.GenericAPIView):
     serializer_class = LoanPredictionSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
@@ -24,14 +24,14 @@ class PredictView(generics.GenericAPIView):
 
 class PredictionListView(generics.ListAPIView):
     serializer_class = LoanPredictionSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         return LoanPrediction.objects.all()
 
 class PredictionDetailView(generics.RetrieveAPIView):
+    # permission_classes = [IsAuthenticated]
     serializer_class = LoanPredictionSerializer
-    permission_classes = [IsAuthenticated]
     lookup_field = 'id'
 
     def get_queryset(self):
