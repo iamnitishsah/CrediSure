@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv
+env/
+
+# Django-specific files
+db.sqlite3
+*.sqlite3
+*.log
+media/
+staticfiles/
+*.pyc
+
+# Environment variables & secrets
+.env
+*.env
+
+# IDE & Editor Files
+.vscode/
+.idea/
+*.iml
+
+# Compiled files
+*.so
+*.pyd
+*.dll
+
+
+
+# Migrations (optional: keep them if sharing)
+**/migrations/*.py
+**/migrations/*.pyc
+!**/migrations/__init__.py
+
+# Node.js (if any frontend exists in repo)
+node_modules/
+
+# Docker
+docker-compose.override.yml
+*.dockerfile
+
+# Misc
+.DS_Store
+Thumbs.db
