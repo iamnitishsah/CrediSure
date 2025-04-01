@@ -1,20 +1,11 @@
-"""
-Django settings for credisure project.
-"""
-
 from pathlib import Path
-import pymysql
-pymysql.install_as_MySQLdb()
 
-# Build paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Security settings
-SECRET_KEY = 'django-insecure-$qg9jlyhr(gx#!q0=jv==^fx7#w3cut7=u*il0c-lsy5nvqh=z'  # Replace with a secure key in production
-DEBUG = True  # Set to False in production
+SECRET_KEY = 'django-insecure-$qg9jlyhr(gx#!q0=jv==^fx7#w3cut7=u*il0c-lsy5nvqh=z'
+DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-# Installed apps
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -28,7 +19,6 @@ INSTALLED_APPS = [
     'users'
 ]
 
-# Middleware
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -39,7 +29,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
@@ -66,7 +55,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'credisure.wsgi.application'
 
-# Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -74,13 +62,11 @@ DATABASES = {
     }
 }
 
-# REST Framework without authentication
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [],
     'DEFAULT_AUTHENTICATION_CLASSES': [],
 }
 
-# Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -88,12 +74,10 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Internationalization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files
 STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
