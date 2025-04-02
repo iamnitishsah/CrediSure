@@ -32,7 +32,7 @@ class PredictionListView(generics.ListAPIView):
 class PredictionDetailView(generics.RetrieveAPIView):
     # permission_classes = [IsAuthenticated]
     serializer_class = LoanPredictionSerializer
-    lookup_field = 'id'
+    lookup_field = 'borrower_id'
 
     def get_queryset(self):
         return LoanPrediction.objects.all()
