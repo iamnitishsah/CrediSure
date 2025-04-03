@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
 DEBUG = os.getenv('DJANGO_DEBUG', 'TRUE')
-ALLOWED_HOSTS = ['https://credisure.onrender.com']
+ALLOWED_HOSTS = ['credisure.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -61,7 +61,6 @@ WSGI_APPLICATION = 'credisure.wsgi.application'
 
 
 
-# Replace the old DATABASES setting with this:
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL')
