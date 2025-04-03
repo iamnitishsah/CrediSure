@@ -1,8 +1,11 @@
 from pathlib import Path
+import dj_database_url
+import os
+
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-import os
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
 DEBUG = os.getenv('DJANGO_DEBUG', 'TRUE')
 ALLOWED_HOSTS = ['CrediSure.onrender.com']
@@ -57,8 +60,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'credisure.wsgi.application'
 
 
-import os
-import dj_database_url
 
 # Replace the old DATABASES setting with this:
 DATABASES = {
