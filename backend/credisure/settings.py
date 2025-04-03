@@ -4,8 +4,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 import os
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')
-DEBUG = True
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+DEBUG = os.getenv('DJANGO_DEBUG', 'TRUE')
+ALLOWED_HOSTS = ['CrediSure.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
